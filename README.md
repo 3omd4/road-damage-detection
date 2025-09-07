@@ -103,4 +103,12 @@ The following plots illustrate the model’s performance during training (availa
 - **F1-Score Curve**  
   ![F1 Curve](visuals/BoxF1_curve.png)
 
-See the [visuals directory](https://github.com/3omd4/road-damage-detection/tree/main/visuals) for all plots and detection examples.
+## Sample Predictions
+Below are some tested samples showing the model detecting potholes, cracks, and manholes:
+
+- **Sample 1: Pothole Detection**  
+  ![Pothole Example](visuals/output1.png)
+
+- **Sample 2: Crack Detection**  
+  ![Crack Example](visuals/output.png)
+
