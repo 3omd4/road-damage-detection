@@ -106,9 +106,7 @@ The following plots illustrate the model’s performance during training (availa
 ## Sample Predictions
 Below are some tested samples showing the model detecting potholes, cracks, and manholes:
 
-- **Sample 1: Pothole Detection**  
-  ![Pothole Example](visuals/output1.png)
+  ![Example](visuals/output1.png)
 
-- **Sample 2: Crack Detection**  
-  ![Crack Example](visuals/output.png)
+  ![Example](visuals/output.png)
 
