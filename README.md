@@ -62,11 +62,6 @@ cd road-damage-detection
    - Download the Road Damage Dataset from [Kaggle](https://www.kaggle.com/datasets/lorenzoarcioni/road-damage-dataset-potholes-cracks-and-manholes).
    - Extract the dataset into the `dataset/` directory.
 
-3. **Install Dependencies**:
-```
-pip install -r requirements.txt
-```
-
 ## Usage
 1. **Preprocess the Data**:
    The dataset is already structured in YOLO format. Ensure the `dataset/` directory contains `images/` and `labels/` subdirectories for training and validation sets, along with a `dataset.yaml` file specifying paths and classes.
