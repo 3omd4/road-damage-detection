@@ -67,10 +67,22 @@ cd road-damage-detection
 The dataset is provided in YOLO format with `images/` and `labels/` directories. Use the Jupyter notebook in the `notebooks/` directory to split the dataset into training and validation sets and start training, ensuring the `dataset/` directory is structured as outlined above and includes a `dataset.yaml` file specifying paths and classes.
 
 3. **Train the Model**:
-   Train the YOLOv8 model using:
+   Train the YOLOv8 model using this cell from script.ipynb file:
 ```
-yolo train model=yolov8n.pt data=dataset.yaml epochs=30 imgsz=640 batch=16
-```
+from ultralytics import YOLO
+
+# Load a pretrained YOLOv8n model
+model = YOLO("yolov8n.pt")
+
+# Train
+results = model.train(
+    data=yaml_path,
+    epochs=30,
+    imgsz=640,
+    project=MODEL_DIR,
+    name="road_damage",
+    plots=True
+)```
    The script trains the YOLOv8n model, fine-tuning from `yolov8n.pt`, and saves the trained models (`last.pt` and `best.pt`) to the `models/` directory.
 
 3. **Evaluate the Model**:
