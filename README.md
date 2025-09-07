@@ -88,43 +88,19 @@ results = model.train(
 3. **Evaluate the Model**:
    Evaluate the model's performance on the validation set:
 ```
-yolo val model=models/best.pt data=dataset.yaml
-```
-   This generates metrics such as mAP (mean Average Precision), precision, recall, and a confusion matrix.
-
-## Model Details
-- **Architecture**: YOLOv8 (pre-trained on COCO using `yolov8n.pt`, fine-tuned for road damage detection).
-- **Input**: Images resized to 640x640 pixels.
-- **Output**: Bounding box predictions with class labels: `pothole`, `crack`, `manhole`.
-- **Training**:
-  - Optimizer: SGD (default in YOLOv8)
-  - Loss: YOLOv8 loss (combining box, objectness, and classification losses)
-  - Batch Size: 16
-  - Epochs: 30
-
-### Model Outputs
-- **Trained Models**:
-  - `last.pt`: The final model checkpoint after 30 epochs.
-  - `best.pt`: The best-performing model checkpoint based on validation mAP.
-
 ## Training Curves
-The following plots show the model's performance during training (available in the `visuals/` directory):
+The following plots illustrate the model’s performance during training (available in the `visuals/` directory):
 
-![Training Curves](visuals/results.png)
-![Confusion Matrix](visuals/confusion_matrix.png)
-![Precision-Recall Curve](visuals/PR_curve.png)
+- **Results Summary (metrics and losses over epochs)**  
+  ![Results Summary](visuals/results.png)
+
+- **Confusion Matrix**  
+  ![Confusion Matrix](visuals/confusion_matrix.png)
+
+- **Precision-Recall Curve**  
+  ![Precision-Recall Curve](visuals/PR_curve.png)
+
+- **F1-Score Curve**  
+  ![F1 Curve](visuals/F1_curve.png)
 
 See the [visuals directory](https://github.com/3omd4/road-damage-detection/tree/main/visuals) for all plots and detection examples.
-
-## Contributing
-Contributions are welcome! Please:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Submit a pull request with a clear description of changes.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-- [Road Damage Dataset: Potholes, Cracks, and Manholes](https://www.kaggle.com/datasets/lorenzoarcioni/road-damage-dataset-potholes-cracks-and-manholes) by Lorenzo Arcioni.
-- [YOLOv8](https://github.com/ultralytics/ultralytics) by Ultralytics for providing the model implementation.
