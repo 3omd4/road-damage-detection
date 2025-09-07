@@ -64,9 +64,9 @@ cd road-damage-detection
 
 ## Usage
 1. **Preprocess the Data**:
-   The dataset is already structured in YOLO format. Ensure the `dataset/` directory contains `images/` and `labels/` subdirectories for training and validation sets, along with a `dataset.yaml` file specifying paths and classes.
+The dataset is provided in YOLO format with `images/` and `labels/` directories. Use the Jupyter notebook in the `notebooks/` directory to split the dataset into training and validation sets and start training, ensuring the `dataset/` directory is structured as outlined above and includes a `dataset.yaml` file specifying paths and classes.
 
-2. **Train the Model**:
+3. **Train the Model**:
    Train the YOLOv8 model using:
 ```
 yolo train model=yolov8n.pt data=dataset.yaml epochs=30 imgsz=640 batch=16
