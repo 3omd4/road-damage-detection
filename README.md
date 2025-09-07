@@ -98,9 +98,9 @@ The following plots illustrate the model’s performance during training (availa
   ![Confusion Matrix](visuals/confusion_matrix.png)
 
 - **Precision-Recall Curve**  
-  ![Precision-Recall Curve](visuals/PR_curve.png)
+  ![Precision-Recall Curve](visuals/BoxPR_curve.png)
 
 - **F1-Score Curve**  
-  ![F1 Curve](visuals/F1_curve.png)
+  ![F1 Curve](visuals/BoxF1_curve.png)
 
 See the [visuals directory](https://github.com/3omd4/road-damage-detection/tree/main/visuals) for all plots and detection examples.
